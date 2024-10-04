@@ -2,10 +2,14 @@
 
 import {
   Atom,
+  BarChart,
+  Bell,
   Bird,
   BookOpen,
   Bot,
+  Calendar,
   Code2,
+  DollarSign,
   Eclipse,
   Frame,
   History,
@@ -19,6 +23,7 @@ import {
   SquareTerminal,
   Star,
   Turtle,
+  User,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -34,6 +39,7 @@ import {
   SidebarHeader,
   SidebarItem,
   SidebarLabel,
+  SidebarTrigger,
 } from "@/components/ui/sidebar"
 import logo from "@/asset/logo.svg"
 import Image from "next/image"
@@ -46,30 +52,55 @@ const data = {
   },
   projects: [
     {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: Home,
+      "title": "Dashboard",
+      "url": "/dashboard",
+      "icon": Home
     },
     {
-      title: "User Management",
-      url: "/dashboard/user-management",
-      icon: Frame,
+      "title": "User Management",
+      "url": "/dashboard/user-management",
+      "icon": Frame
     },
     {
-      title: "Sales & Marketing",
-      url: "/dashboard/user-management",
-      icon: PieChart,
+      "title": "Category Management",
+      "url": "/dashboard/category-management",
+      "icon": Frame
     },
-    {
-      title: "Bug Reports",
-      url: "/dashboard/bug-report",
-      icon: Map,
-    },
-    {
-      title: "Landing Page Management",
-      url: "/dashboard/landing-page-settings",
-      icon: Map,
-    },
+    // {
+    //   "title": "Sales & Marketing",
+    //   "url": "/dashboard/sales-marketing",
+    //   "icon": PieChart
+    // },
+    // {
+    //   "title": "Landing Page Management",
+    //   "url": "/dashboard/landing-page-settings",
+    //   "icon": Map
+    // },
+    // {
+    //   "title": "Application Management",
+    //   "url": "/dashboard/app-settings",
+    //   "icon": Map
+    // },
+    // {
+    //   "title": "Bug Reports",
+    //   "url": "/dashboard/bug-report",
+    //   "icon": Map
+    // },
+    // {
+    //   "title": "Appointment Management",
+    //   "url": "/dashboard/appointment-management",
+    //   "icon": Calendar
+    // },
+    // {
+    //   "title": "Analytics & Reports",
+    //   "url": "/dashboard/analytics-reports",
+    //   "icon": BarChart
+    // },
+    // {
+    //   "title": "Payment & Transaction Management",
+    //   "url": "/dashboard/payment-management",
+    //   "icon": DollarSign
+    // },
   ],
   searchResults: [
     {
