@@ -26,10 +26,8 @@ export default function RootLayout({ children }) {
 
     try {
       if (!user && router.pathname !== "/login") {
-        // If the user is not logged in and not on the login page, redirect to login
         router.push("/login");
       } else if (user && router.pathname !== "/dashboard") {
-        // If the user is logged in and not on the dashboard page, redirect to dashboard
         router.push("/dashboard");
       }
     } catch (e) {
@@ -37,7 +35,7 @@ export default function RootLayout({ children }) {
     } finally {
       setLoading(false)
     }
-  }, [router]);
+  }, [router.pathname]);
   if (loading) {
     return <LoadingMessages />
   }

@@ -1,11 +1,7 @@
 import {
-  BadgeCheck,
-  Bell,
   ChevronsUpDown,
-  CreditCard,
   LogOut,
 } from "lucide-react"
-
 import {
   Avatar,
   AvatarFallback,
@@ -14,16 +10,18 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useRouter } from "next/navigation";
 
 export function NavUser({
   user
 }) {
+  const router = useRouter();
+
   return (
     (<DropdownMenu>
       <DropdownMenuTrigger
@@ -63,10 +61,13 @@ export function NavUser({
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => {
-          localStorage.removeItem("user");
-          window.location.href = "/login";
-        }} className="gap-2">
+        <DropdownMenuItem
+          onClick={() => {
+            localStorage.removeItem("user");
+            router.push("/login");
+          }}
+          className="gap-2"
+        >
           <LogOut className="h-4 w-4 text-muted-foreground" />
           Log out
         </DropdownMenuItem>

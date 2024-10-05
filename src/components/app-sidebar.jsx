@@ -25,21 +25,14 @@ import {
   Turtle,
   User,
 } from "lucide-react"
-
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
-import { StorageCard } from "@/components/storage-card"
-import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarItem,
-  SidebarLabel,
-  SidebarTrigger,
 } from "@/components/ui/sidebar"
 import logo from "@/asset/logo.svg"
 import Image from "next/image"
@@ -62,41 +55,36 @@ const data = {
       "url": "/dashboard/category-management",
       "icon": Frame
     },
-    // {
-    //   "title": "Sales & Marketing",
-    //   "url": "/dashboard/sales-marketing",
-    //   "icon": PieChart
-    // },
-    // {
-    //   "title": "Landing Page Management",
-    //   "url": "/dashboard/landing-page-settings",
-    //   "icon": Map
-    // },
-    // {
-    //   "title": "Application Management",
-    //   "url": "/dashboard/app-settings",
-    //   "icon": Map
-    // },
-    // {
-    //   "title": "Bug Reports",
-    //   "url": "/dashboard/bug-report",
-    //   "icon": Map
-    // },
-    // {
-    //   "title": "Appointment Management",
-    //   "url": "/dashboard/appointment-management",
-    //   "icon": Calendar
-    // },
-    // {
-    //   "title": "Analytics & Reports",
-    //   "url": "/dashboard/analytics-reports",
-    //   "icon": BarChart
-    // },
-    // {
-    //   "title": "Payment & Transaction Management",
-    //   "url": "/dashboard/payment-management",
-    //   "icon": DollarSign
-    // },
+    {
+      "title": "Sales & Marketing",
+      "url": "/dashboard/sales-marketing",
+      "icon": PieChart
+    },
+    {
+      "title": "Application Management",
+      "url": "/dashboard/app-settings",
+      "icon": Map
+    },
+    {
+      "title": "Bug Reports",
+      "url": "/dashboard/bug-report",
+      "icon": Map
+    },
+    {
+      "title": "Appointment Management",
+      "url": "/dashboard/appointment-management",
+      "icon": Calendar
+    },
+    {
+      "title": "Payment & Transaction Management",
+      "url": "/dashboard/payment-management",
+      "icon": DollarSign
+    },
+    {
+      "title": "Landing Page Management",
+      "url": "/dashboard/landing-page-settings",
+      "icon": Map
+    },
   ],
   searchResults: [
     {
