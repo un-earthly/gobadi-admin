@@ -15,7 +15,7 @@
 // import axios from 'axios'
 
 // const api = axios.create({
-//     baseURL: 'http://localhost:8080/api',
+//     baseURL: 'https://gobadi-server.onrender.com/api',
 // })
 
 // export default function CategoryManagement() {
@@ -296,7 +296,7 @@ import {
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api',
+    baseURL: 'https://gobadi-server.onrender.com/api',
 })
 export default function CategoryManagement() {
     const [categories, setCategories] = useState([])
@@ -307,7 +307,7 @@ export default function CategoryManagement() {
     const [newCategoryTitle, setNewCategoryTitle] = useState('')
     const [newCategoryImage, setNewCategoryImage] = useState(null)
     const [newSubCategoryTitle, setNewSubCategoryTitle] = useState('')
-    const [editingSubCategory, setEditingSubCategory] = useState (null)
+    const [editingSubCategory, setEditingSubCategory] = useState(null)
     const [editSubCategoryTitle, setEditSubCategoryTitle] = useState('')
     useEffect(() => {
         fetchCategories()
