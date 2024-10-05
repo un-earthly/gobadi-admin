@@ -44,12 +44,8 @@ import {
 import logo from "@/asset/logo.svg"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   projects: [
     {
       "title": "Dashboard",
@@ -137,6 +133,16 @@ const data = {
 }
 
 export function AppSidebar() {
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    const stuser = JSON.parse(localStorage.getItem("user"));
+    console.log(stuser);
+    try {
+      setUser(stuser)
+    } catch (e) {
+      console.log(e)
+    }
+  }, []);
   return (
     (<Sidebar>
       <SidebarHeader>
@@ -151,9 +157,13 @@ export function AppSidebar() {
           <NavSecondary items={data.projects} />
         </SidebarItem>
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
+      {
+        user && Object.keys(user).length > 0 ?
+          <SidebarFooter>
+            <NavUser user={user} />
+          </SidebarFooter>
+          : null
+      }
     </Sidebar>)
   );
 }

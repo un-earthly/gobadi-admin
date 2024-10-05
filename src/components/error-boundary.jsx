@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 
 
-class ErrorBoundary extends Component{
+class ErrorBoundary extends Component {
     constructor(props) {
         super(props)
         this.state = { hasError: false }
@@ -27,7 +27,7 @@ class ErrorBoundary extends Component{
                     <div className="bg-white p-8 rounded-lg shadow-md text-center">
                         <AlertTriangle className="mx-auto h-12 w-12 text-yellow-500 mb-4" />
                         <h1 className="text-2xl font-bold mb-4">Oops! Something went wrong.</h1>
-                        <p className="mb-4">We're sorry for the inconvenience. Please try again later.</p>
+                        <p className="mb-4">We&apos;re sorry for the inconvenience. Please try again later.</p>
                         <Button onClick={() => this.setState({ hasError: false })}>
                             Try Again
                         </Button>

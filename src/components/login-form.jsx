@@ -1,5 +1,7 @@
 "use client"
+import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -11,32 +13,57 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useRouter } from "next/navigation"
+import api from "@/lib/api"
 
 export function LoginForm() {
   const router = useRouter()
-  const handleSubmit = () => {
-    localStorage.setItem("user", JSON.stringify({
-      name: "test",
-      password: "test",
-      token: "test",
-      role: "admin"
-    }));
-    router.push("/dashboard")
+  const [mobile, setMobile] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setError("")
+
+    try {
+      const response = await api.post("/auth/login", { mobile, password })
+
+      if (response.data) {
+        localStorage.setItem("user", JSON.stringify(response.data.user))
+        router.push("/dashboard")
+      } else {
+        const errorData = await response.json()
+        setError(errorData.message || "Login failed")
+      }
+    } catch (error) {
+      setError("An error occurred. Please try again.")
+    } finally {
+      setIsLoading(false)
+    }
   }
+
   return (
-    (<Card className="mx-auto max-w-sm">
+    <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
         <CardDescription>
-          Enter your email below to login to your account
+          Enter your mobile number and password to login
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-4">
+        <form onSubmit={handleSubmit} className="grid gap-4">
           <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" required />
+            <Label htmlFor="mobile">Mobile</Label>
+            <Input
+              id="mobile"
+              type="tel"
+              placeholder="Enter your mobile number"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              required
+            />
           </div>
           <div className="grid gap-2">
             <div className="flex items-center">
@@ -45,14 +72,20 @@ export function LoginForm() {
                 Forgot your password?
               </Link>
             </div>
-            <Input id="password" type="password" required />
+            <Input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
-          <Button onClick={() => handleSubmit()} className="w-full">
-            Login
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+          <Button type="submit" className="w-full" disabled={isLoading}>
+            {isLoading ? "Logging in..." : "Login"}
           </Button>
-
-        </div>
+        </form>
       </CardContent>
-    </Card>)
-  );
+    </Card>
+  )
 }

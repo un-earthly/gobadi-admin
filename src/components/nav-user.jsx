@@ -65,7 +65,7 @@ export function NavUser({
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => {
           localStorage.removeItem("user");
-          window.location.href = "/login"; // redirect after logout
+          window.location.href = "/login";
         }} className="gap-2">
           <LogOut className="h-4 w-4 text-muted-foreground" />
           Log out
