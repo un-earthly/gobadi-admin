@@ -11,7 +11,7 @@ export default function Home() {
     } else {
       window.location.href = "/login"; // redirect if no user is found
     }
-  }, [user]);
+  }, []);
 
   return (
     <>
