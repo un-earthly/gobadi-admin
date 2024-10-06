@@ -43,51 +43,51 @@ const data = {
   projects: [
     {
       "title": "Dashboard",
-      "url": "",
+      "url": "/dashboard",
       "icon": Home
     },
     {
       "title": "User Management",
-      "url": "/user-management",
+      "url": "/dashboard/user-management",
       "icon": User
     },
     {
       "title": "Category Management",
-      "url": "/category-management",
+      "url": "/dashboard/category-management",
       "icon": Frame
     },
     {
       "title": "Sales & Marketing",
-      "url": "/sales-marketing",
+      "url": "/dashboard/sales-marketing",
       "icon": PieChart
     },
     {
       "title": "Application Management",
-      "url": "/app-settings",
+      "url": "/dashboard/app-settings",
       "icon": Map
     },
     {
       "title": "Bug Reports",
-      "url": "/bug-report",
+      "url": "/dashboard/bug-report",
       "icon": Bug
     },
     {
       "title": "Appointment Management",
-      "url": "/appointment-management",
+      "url": "/dashboard/appointment-management",
       "icon": Calendar
     },
     {
       "title": "Payment & Transaction Management",
-      "url": "/payment-management",
+      "url": "/dashboard/payment-management",
       "icon": DollarSign
     },
     {
       "title": "Landing Page Management",
-      "url": "/landing-page-settings",
+      "url": "/dashboard/landing-page-settings",
       "icon": Map
     },
   ],
- 
+
 }
 
 export function AppSidebar() {

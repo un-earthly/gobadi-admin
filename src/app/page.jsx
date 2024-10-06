@@ -21,7 +21,7 @@ export default function Home() {
         } finally {
             setLoading(false);
         }
-    }, []);
+    }, [router.pathname]);
 
     if (loading) {
         return <LoadingMessages />;
