@@ -6,7 +6,6 @@ import {
 import { cookies } from "next/headers"
 
 export default function Page({ children }) {
-    // Access cookies to manage sidebar state
     const sidebarState = cookies().get("sidebar:state")?.value === "true";
 
     return (
