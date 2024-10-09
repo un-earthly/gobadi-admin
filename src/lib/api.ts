@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://gobadi-server.onrender.com/api',
+    baseURL: `${process.env.REACT_PUBLIC_BASE}/api`,
 });
 
 export const getCategories = () => api.get('/categories');

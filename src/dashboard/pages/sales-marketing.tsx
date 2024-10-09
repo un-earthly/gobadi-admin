@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState } from 'react'
-import { Plus, Edit, Trash2, Image as ImageIcon, TrendingUp, Users, DollarSign, BarChart } from 'lucide-react'
+import { useState } from 'react'
+import { Plus, Edit, Trash2, TrendingUp, Users, DollarSign, BarChart } from 'lucide-react'
 import { format } from 'date-fns'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -33,8 +33,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import DashboardLayout from '@/layout/default'
 
 export default function SalesMarketingManagement() {
