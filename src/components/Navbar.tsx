@@ -11,9 +11,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
+import { Link } from "@radix-ui/react-navigation-menu";
 
 interface RouteProps {
   href: string;
@@ -59,7 +60,6 @@ export const Navbar = () => {
           {/* mobile */}
           <span className="flex md:hidden">
             <ModeToggle />
-
             <Sheet
               open={isOpen}
               onOpenChange={setIsOpen}
@@ -91,6 +91,12 @@ export const Navbar = () => {
                       {label}
                     </a>
                   ))}
+
+                  <Button>
+                    <a href="/login" >
+                      Login
+                    </a>
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -114,7 +120,11 @@ export const Navbar = () => {
 
           <div className="hidden md:flex gap-2">
 
-
+            <Button>
+              <Link href="/login" >
+                Login
+              </Link>
+            </Button>
             <ModeToggle />
           </div>
         </NavigationMenuList>
