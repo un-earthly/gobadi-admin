@@ -1,5 +1,3 @@
-import { LogoIcon } from "./Icons";
-
 export const Footer = () => {
   return (
     <footer id="footer">
@@ -12,20 +10,19 @@ export const Footer = () => {
             href="/"
             className="font-bold text-xl flex"
           >
-            <LogoIcon />
-            ShadcnUI/React
+            <img src="/public/logo.svg" className="dark:invert-[100%]" height={200} width={200} alt="" />
           </a>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
+          <h3 className="font-bold text-lg">আমাদের অনুসরণ করুন</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Github
+              গিটহাব
             </a>
           </div>
 
@@ -35,7 +32,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Twitter
+              টুইটার
             </a>
           </div>
 
@@ -45,53 +42,20 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Dribbble
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
+              ড্রিব্বল
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
+          <h3 className="font-bold text-lg">প্ল্যাটফর্মসমূহ</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Features
+              ওয়েব
             </a>
           </div>
 
@@ -101,7 +65,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Pricing
+              মোবাইল
             </a>
           </div>
 
@@ -111,20 +75,20 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              FAQ
+              ডেস্কটপ
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
+          <h3 className="font-bold text-lg">আমাদের সম্পর্কে</h3>
           <div>
             <a
               rel="noreferrer noopener"
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Youtube
+              বৈশিষ্ট্যসমূহ
             </a>
           </div>
 
@@ -134,7 +98,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Discord
+              মূল্য নির্ধারণ
             </a>
           </div>
 
@@ -144,24 +108,43 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Twitch
+              প্রায়শই জিজ্ঞাসিত প্রশ্ন
             </a>
           </div>
         </div>
-      </section>
 
-      <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 Landing page made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>
-        </h3>
+        <div className="flex flex-col gap-2">
+          <h3 className="font-bold text-lg">কমিউনিটি</h3>
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              ইউটিউব
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              ডিসকর্ড
+            </a>
+          </div>
+
+          <div>
+            <a
+              rel="noreferrer noopener"
+              href="#"
+              className="opacity-60 hover:opacity-100"
+            >
+              টুইচ
+            </a>
+          </div>
+        </div>
       </section>
     </footer>
   );

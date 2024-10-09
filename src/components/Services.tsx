@@ -7,25 +7,24 @@ interface ServiceProps {
   description: string;
   icon: JSX.Element;
 }
-
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "পশু যত্ন",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
+      "গবাদি পশুর জন্য বিশেষ যত্ন সেবা, যা আপনার পোষ্যের স্বাস্থ্য এবং সুরক্ষার জন্য ডিজাইন করা হয়েছে।",
+    icon: <ChartIcon />, // Consider updating the icon to reflect the context
   },
   {
-    title: "Project Management",
+    title: "অ্যাপয়েন্টমেন্ট ব্যবস্থাপনা",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
+      "আপনার পশু ডাক্তারদের সাথে অ্যাপয়েন্টমেন্ট সেটআপ এবং পরিচালনা করুন, সুবিধাজনক সময়ে সেবা নিন।",
+    icon: <WalletIcon />, // Consider updating the icon to reflect the context
   },
   {
-    title: "Task Automation",
+    title: "ভিডিও কল সেবা",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
+      "ডাক্তারদের সাথে সরাসরি ভিডিও কলের মাধ্যমে পোষ্যের সমস্যা নিয়ে আলোচনা করুন।",
+    icon: <MagnifierIcon />, // Consider updating the icon to reflect the context
   },
 ];
 
@@ -36,14 +35,14 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              গ্রাহক-কেন্দ্রিক{" "}
             </span>
-            Services
+            সেবা
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+            আমাদের লক্ষ্য হল আপনার পোষ্যের যত্ন নেওয়া। গবাদি সেবা প্রদান করে
+            আমরা আপনার বিশ্বাস ও সন্তুষ্টি অর্জনের জন্য প্রতিশ্রুতিবদ্ধ।
           </p>
 
           <div className="flex flex-col gap-8">

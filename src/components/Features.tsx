@@ -18,36 +18,40 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "মোবাইল ডিভাইসে অভিজ্ঞান", // Mobile Experience
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "গবাদি একটি মোবাইল অ্যাপ্লিকেশন, যা মোবাইল জন্য সম্পূর্ণরূপে ব্যবহার উপযোগী। আপনি যেকোনো ডিভাইস থেকে সহজেই গবাদি পশুর সেবা পেতে পারেন।",
     image: image4,
   },
+
   {
-    title: "Intuitive user interface",
+    title: "সহজ ও বোধগম্য ব্যবহারকারীর ইন্টারফেস", // Intuitive user interface
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "আমাদের অ্যাপ্লিকেশনটি এমনভাবে ডিজাইন করা হয়েছে যাতে যেকোনো ব্যবহারকারী সহজে পশু সেবা নিতে পারেন।",
     image: image3,
   },
   {
-    title: "AI-Powered insights",
+    title: "কৃত্রিম বুদ্ধিমত্তা দ্বারা চালিত পরামর্শ", // AI-Powered insights
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "আমাদের প্ল্যাটফর্মটি কৃত্রিম বুদ্ধিমত্তা দ্বারা চালিত, যা আপনার গবাদি পশুর যত্ন এবং চিকিৎসার জন্য সঠিক পরামর্শ প্রদান করে।",
     image: image,
   },
 ];
 
+
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "ডার্ক/লাইট থিম", // Dark/Light theme
+  "ব্যবহারকারীর মতামত", // Reviews
+  "সেবা বৈশিষ্ট্য", // Service Features
+  "মূল্য নির্ধারণ", // Pricing
+  "সহজ ও পরিস্কার নকশা", // Minimalist
+  "প্রদানকারী নির্ধারণ", // Select Providers
+  "অ্যাপয়েন্টমেন্ট সময়সূচী", // Appointment Scheduling
+  "গবাদি পশুর রোগ শনাক্তকরণ", // Cattle Disease Diagnosis
+  "চিকিৎসা ও পরামর্শ", // Treatment and Consultation
+  "স্বাস্থ্য প্রতিবেদন ও আপডেট", // Health Reports & Updates
 ];
+
 
 export const Features = () => {
   return (
@@ -56,11 +60,12 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        আমাদের{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          শ্রেষ্ঠ বৈশিষ্ট্যসমূহ
         </span>
       </h2>
+
 
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature: string) => (

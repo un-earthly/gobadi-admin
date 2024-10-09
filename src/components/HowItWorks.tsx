@@ -6,33 +6,33 @@ interface FeatureProps {
   title: string;
   description: string;
 }
-
 const features: FeatureProps[] = [
   {
     icon: <MedalIcon />,
-    title: "Accessibility",
+    title: "ব্যবহারকারীর রেজিস্ট্রেশন",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "পশু মালিক বা পরিষেবা প্রদানকারী হিসেবে নিবন্ধন করুন এবং সুবিধার অভিজ্ঞতা শুরু করুন।",
   },
   {
     icon: <MapIcon />,
-    title: "Community",
+    title: "ভেটেরিনারি বিভাগ নির্বাচন",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "আপনার পশুর জন্য সঠিক ভেটেরিনারি বিভাগ নির্বাচন করুন এবং প্রয়োজনীয় তথ্য পূরণ করুন।",
   },
   {
     icon: <PlaneIcon />,
-    title: "Scalability",
+    title: "নির্ধারিত অ্যাপয়েন্টমেন্ট",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "আপনার অ্যাপয়েন্টমেন্টের সময় নির্ধারণ করুন এবং নিশ্চিতকরণের জন্য অপেক্ষা করুন।",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
+    title: "ভিডিও/অডিও কল",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "ডাক্তারের সঙ্গে ভিডিও বা অডিও কলের মাধ্যমে সরাসরি যোগাযোগ করুন।",
   },
 ];
+
 
 export const HowItWorks = () => {
   return (
@@ -41,16 +41,17 @@ export const HowItWorks = () => {
       className="container text-center py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
-        How It{" "}
+        কিভাবে{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Works{" "}
+          কাজ করে{" "}
         </span>
-        Step-by-Step Guide
+        ধাপে ধাপে গাইড
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        গবাদি সেবা ব্যবহার করার জন্য ধাপে ধাপে নির্দেশিকা। আমাদের লক্ষ্য হল
+        আপনার পোষ্যের যত্ন নেওয়া এবং সহজতম অভিজ্ঞতা প্রদান করা।
       </p>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map(({ icon, title, description }: FeatureProps) => (

@@ -2,7 +2,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -13,51 +12,50 @@ interface TestimonialProps {
   userName: string;
   comment: string;
 }
-
 const testimonials: TestimonialProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    image: "https://randomuser.me/api/portraits/men/93.jpg",
+    name: "মাহমুদ হাসান",
+    userName: "@mahmud_hasan",
+    comment: "গবাদি পশু সেবার জন্য এই অ্যাপটি চমৎকার! চিকিৎসকরা খুবই সহযোগিতা করছেন।",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe1",
+    image: "https://randomuser.me/api/portraits/women/93.jpg",
+    name: "ফাতিমা রহমান",
+    userName: "@fatima_rahman",
     comment:
-      "Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-  },
-
-  {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe2",
-    comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "আমি পশু চিকিৎসার জন্য যথেষ্ট সেবা পেয়েছি। সেবা পেতে দেরি হয়নি এবং চিকিৎসকেরা অভিজ্ঞ।",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe3",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "সাবের কাদের",
+    userName: "@sabir_kader",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "এটি সত্যিই একটি অসাধারণ পরিষেবা! অ্যাপের মাধ্যমে দ্রুত এপয়েন্টমেন্ট পেয়েছি।",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe4",
+    image: "https://randomuser.me/api/portraits/men/100.jpg",
+    name: "নাজমুল ইসলাম",
+    userName: "@najmul_islam",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.",
+      "গবাদি পশুর জন্য এই পরিষেবা অসাধারণ! সহজে যোগাযোগ করতে পারি এবং দ্রুত সেবা পাই।",
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe React",
-    userName: "@john_Doe5",
+    image: "https://randomuser.me/api/portraits/women/13.jpg",
+    name: "রহিমা সুলতানা",
+    userName: "@rahima_sultana",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "এটি আমার পোষ্যের জন্য সেরা পরিষেবা। চিকিৎসকরা খুবই সাহায্যকারী এবং মৃদুভাষী।",
+  },
+  {
+    image: "https://randomuser.me/api/portraits/men/43.jpg",
+    name: "ইমরান আলী",
+    userName: "@imran_ali",
+    comment:
+      "সেবা নিতে খুবই সুবিধা। চিকিৎসকরা পেশাদার এবং আমার পোষ্যের যত্ন নিচ্ছেন।",
   },
 ];
+
 
 export const Testimonials = () => {
   return (
@@ -66,17 +64,17 @@ export const Testimonials = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
+        জানুন কেন
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          মানুষ ভালোবাসে{" "}
         </span>
-        This Landing Page
+        গবাদি অ্যাপটি
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        আমাদের পরিষেবাগুলি আপনার পোষ্যের জন্য সেরা যত্ন নিশ্চিত করে। আপনার
+        পোষ্যের স্বাস্থ্য আমাদের জন্য প্রধান অগ্রাধিকার।
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
@@ -97,7 +95,7 @@ export const Testimonials = () => {
 
                 <div className="flex flex-col">
                   <CardTitle className="text-lg">{name}</CardTitle>
-                  <CardDescription>{userName}</CardDescription>
+                  {/* <CardDescription>{userName}</CardDescription> */}
                 </div>
               </CardHeader>
 

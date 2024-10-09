@@ -6,22 +6,23 @@ export const Statistics = () => {
 
   const stats: statsProps[] = [
     {
-      quantity: "2.7K+",
-      description: "Users",
+      quantity: "5K+",
+      description: "সন্তুষ্ট ব্যবহারকারী",
     },
     {
-      quantity: "1.8K+",
-      description: "Subscribers",
+      quantity: "3K+",
+      description: "নিবন্ধিত গ্রাহক",
     },
     {
-      quantity: "112",
-      description: "Downloads",
+      quantity: "150",
+      description: "ডাউনলোড",
     },
     {
-      quantity: "4",
-      description: "Products",
+      quantity: "10",
+      description: "সেবা",
     },
   ];
+
 
   return (
     <section id="statistics">

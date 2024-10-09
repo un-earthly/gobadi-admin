@@ -10,36 +10,33 @@ interface FAQProps {
   answer: string;
   value: string;
 }
-
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "এই সেবা কি ফ্রি?",
+    answer: "না, প্রতিটি সেবা আলাদাভাবে মূল্য নির্ধারণ করা হয়।",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "কিভাবে আমি একটি অ্যাপয়েন্টমেন্ট নির্ধারণ করতে পারি?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "আপনি প্রথমে আপনার পশুর জন্য সঠিক ভেটেরিনারি বিভাগ নির্বাচন করুন এবং প্রয়োজনীয় তথ্য পূরণ করুন। তারপর অ্যাপয়েন্টমেন্টের সময় নির্ধারণ করুন।",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+    question: "ভিডিও কল কিভাবে কাজ করে?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "আপনার অ্যাপয়েন্টমেন্ট নিশ্চিত হলে, আপনি ডাক্তারের সঙ্গে ভিডিও কলের মাধ্যমে যোগাযোগ করতে পারবেন।",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "আমি কি একাধিক পশুর জন্য পরিষেবা নিতে পারি?",
+    answer: "হ্যাঁ, আপনি একাধিক পশুর জন্য আলাদা আলাদা অ্যাপয়েন্টমেন্ট নির্ধারণ করতে পারেন।",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+    question: "কিভাবে আমি আমার অ্যাপয়েন্টমেন্ট বাতিল করতে পারি?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "আপনার অ্যাপয়েন্টমেন্ট বাতিল করার জন্য আমাদের সাথে যোগাযোগ করুন বা আপনার অ্যাকাউন্ট থেকে বাতিল করুন।",
     value: "item-5",
   },
 ];
@@ -51,11 +48,12 @@ export const FAQ = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Frequently Asked{" "}
+        সাধারণত জিজ্ঞাসিত{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Questions
+          প্রশ্নাবলী
         </span>
       </h2>
+
 
       <Accordion
         type="single"
@@ -77,15 +75,16 @@ export const FAQ = () => {
       </Accordion>
 
       <h3 className="font-medium mt-4">
-        Still have questions?{" "}
+        এখনও কি কোনও প্রশ্ন আছে?{" "}
         <a
           rel="noreferrer noopener"
           href="#"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
-          Contact us
+          আমাদের সাথে যোগাযোগ করুন
         </a>
       </h3>
+
     </section>
   );
 };
