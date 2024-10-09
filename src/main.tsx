@@ -8,6 +8,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Dashboard from "./dashboard/Dashboard";
+import Login from "./login/Login.tsx";
+import AdminUserManagement from "./dashboard/pages/user-management.tsx";
+import CategoryManagement from "./dashboard/pages/category-management.tsx";
+import LandingPageSettings from "./dashboard/pages/landing-page-settings.tsx";
+import PaymentManagement from "./dashboard/pages/payment-management.tsx";
+import AppointmentManagement from "./dashboard/pages/appointment-management.tsx";
+import BugReporting from "./dashboard/pages/bug-report.tsx";
+import AppSettings from "./dashboard/pages/app-settings.tsx";
+import SalesMarketingManagement from "./dashboard/pages/sales-marketing.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <div>login</div>,
+    element: <Login />,
   },
   {
     path: "dashboard",
@@ -26,35 +35,35 @@ const router = createBrowserRouter([
       },
       {
         path: "user-management",
-        element: <div>User Management</div>
+        element: <AdminUserManagement />
       },
       {
         path: "category-management",
-        element: <div>User Management</div>
+        element: <CategoryManagement />
       },
       {
         path: "sales-marketing",
-        element: <div>User Management</div>
+        element: <SalesMarketingManagement />
       },
       {
         path: "app-settings",
-        element: <div>User Management</div>
+        element: <AppSettings />
       },
       {
         path: "bug-report",
-        element: <div>User Management</div>
+        element: <BugReporting />
       },
       {
         path: "appointment-management",
-        element: <div>User Management</div>
+        element: <AppointmentManagement />
       },
       {
         path: "payment-management",
-        element: <div>User Management</div>
+        element: <PaymentManagement />
       },
       {
         path: "landing-page-settings",
-        element: <div>User Management</div>
+        element: <LandingPageSettings />
       }
     ]
   }
